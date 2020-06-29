@@ -3,8 +3,7 @@ const API = axios.create({
   timeout: 1000
 });
 
-$(document).ready(function(){
-  console.log(axios)
+$(document).ready(function(){  
 
   $('#loginBtn').on('click', function(event) {
     event.preventDefault()
