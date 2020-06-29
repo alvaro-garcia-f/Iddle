@@ -9,7 +9,7 @@
   <title>Iddle</title>
   <meta name="description" content="Wireframe design of an album page by Pingendo">
   <meta name="keywords" content="Pingendo bootstrap example template wireframe album ">
-  <meta name="author" content="Alberto Merino, Carlos Artiles, Álvaro García">
+  <meta name="author" content="Alberto Merino, Álvaro García, Carlos Artiles">
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     type="text/css">
@@ -32,17 +32,18 @@
         </div>
 
         <div class="modal-body">
-          <form>
+          <form id="loginForm">
             <div class="form-group">
               <label for="loginEmail">Email</label>
               <input type="email" class="form-control" id="loginEmail" placeholder="example@example.com" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
               <label for="loginPassword">Password</label>
-              <input type="password" class="form-control" id="loginPassword">
+              <input type="password" class="form-control" id="loginPassword" autocomplete="true">
             </div>
             <div class="text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" id="loginBtn">Submit</button>
+              <button type="submit" class="btn btn-primary" id="loginBtn">Submit</button>
             </div>
           </form>
         </div>
@@ -72,19 +73,19 @@
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <label for="loginEmail">Email</label>
-              <input type="email" class="form-control" id="loginEmail" placeholder="example@example.com" aria-describedby="emailHelp">
+              <label for="signupEmail">Email</label>
+              <input type="email" class="form-control" id="signupEmail" placeholder="example@example.com" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
-              <label for="loginPassword">Password</label>
-              <input type="password" class="form-control" id="loginPassword">
+              <label for="signupPassword">Password</label>
+              <input type="password" class="form-control" id="signupPassword" autocomplete="true">
             </div>
             <div class="form-group">
-              <label for="loginPassword2">Repeat Password</label>
-              <input type="password" class="form-control" id="loginPassword2">
+              <label for="signupPassword2">Repeat Password</label>
+              <input type="password" class="form-control" id="signupPassword2" autocomplete="true">
             </div>
             <div class="text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" id="signUpBtn">Submit</button>
             </div>
           </form>
         </div>
@@ -318,15 +319,17 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/axios/dist/axios.min.js"></script>
+  <script src="scripts/checkauth.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>
