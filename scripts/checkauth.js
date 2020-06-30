@@ -1,9 +1,9 @@
 
-  // USER NOT LOGGED
-  if ( !localStorage.getItem('token')) {
-    document.getElementById('myNavbar').innerHTML = `
+// USER NOT LOGGED
+if (!localStorage.getItem('token')) {
+  document.getElementById('myNavbar').innerHTML = `
     <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
+      <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">
       <span class="navbar-toggler-icon"></span> </button>
     </div>
@@ -35,10 +35,10 @@
       </ul>
     </div>
     `
-  } else {
-    document.getElementById('myNavbar').innerHTML = `
+} else {
+  document.getElementById('myNavbar').innerHTML = `
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
+        <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"> <span
             class="navbar-toggler-icon"></span> </button>
       </div>
@@ -80,8 +80,8 @@
       </div>
     `
 
-    document.getElementById('logout').addEventListener('click', function(e) {
-      localStorage.clear();
-      window.location.href = 'index.html'
-    })
-  }
+  document.getElementById('logout').addEventListener('click', function (e) {
+    localStorage.clear()
+    window.location.href = 'index.html'
+  })
+}

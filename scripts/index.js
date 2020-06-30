@@ -1,13 +1,12 @@
 const API = axios.create({
   baseURL: 'http://localhost:3000/api',
   timeout: 1000
-});
+})
 
-$(document).ready(function(){  
-
-  $('#loginBtn').on('click', function(event) {
+$(document).ready(function () {
+  $('#loginBtn').on('click', function (event) {
     event.preventDefault()
-    const data ={
+    const data = {
       user_email: $('#loginEmail').val(),
       user_password: $('#loginPassword').val()
     }
@@ -18,23 +17,26 @@ $(document).ready(function(){
         if (response.data.error) {
           alert('Wrong Email/Password!')
         } else {
-          console.log('Your in motherfaka');
+          console.log('Your in motherfaka')
+          localStorage.setItem('token', response.data.token)
+          localStorage.setItem('email', response.data.email)
+          window.location.href = 'index.html'
         }
       })
       .catch(function (error) {
-        console.log(error);
-      });
+        console.log(error)
+      })
   })
 
-  $('#signUpBtn').on('click', function(event) {
+  $('#signUpBtn').on('click', function (event) {
     event.preventDefault()
     if ($('#signupPassword').val() !== $('#signupPassword2').val()) {
-      alert('Passwords do not match!'); return;
+      alert('Passwords do not match!'); return
     }
     if ($('#signupPassword').val().length < 6 || $('#signupPassword2').val().length < 6) {
-      alert('Passwords are too short!'); return;
+      alert('Passwords are too short!'); return
     }
-    const data ={
+    const data = {
       user_email: $('#signupEmail').val(),
       user_password: $('#signupPassword').val()
     }
@@ -45,15 +47,15 @@ $(document).ready(function(){
         if (response.data.error) {
           alert(response.data.error)
         } else {
-          console.log('Your in motherfaka');
+          console.log('Your in motherfaka')
           localStorage.setItem('token', response.data.token)
           localStorage.setItem('email', response.data.email)
           window.location.href = 'own-profile-logged.html'
         }
       })
       .catch(function (error) {
-        console.log(error);
-        alert('Account already registered!');
-      });
+        console.log(error)
+        alert('Account already registered!')
+      })
   })
 })
