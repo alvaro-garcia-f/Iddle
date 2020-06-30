@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  API.put(`/videos/${localStorage.getItem("videoId")}/views`)
+     .then(response => console.log(response.data))
+     .catch(error => console.error(error))
+     
+  
   API.get(`/videos/${localStorage.getItem("videoId")}`)
        .then(response => {
          console.log(response.data.url)         
