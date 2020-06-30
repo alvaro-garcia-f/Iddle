@@ -1,13 +1,11 @@
 
 // USER NOT LOGGED
 if (!localStorage.getItem('token')) {
-  document.getElementById('myNavbar').innerHTML = `
-    <div class="container d-flex justify-content-between">
-      <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">
-      <span class="navbar-toggler-icon"></span> </button>
-    </div>
-    <div class="collapse bg-light text-right" id="navbarHeader">
+  document.getElementById('myNavbar').innerHTML = `    
+    <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">
+      <span class="navbar-toggler-icon"></span> </button>    
+    <div class="collapse bg-light navbar-collapse" id="navbarHeader">
       <ul class="navbar-nav ml-3 mt-3">
         <li class="nav-item">
           <form class="form-inline my-1 my-lg-0">
@@ -37,13 +35,10 @@ if (!localStorage.getItem('token')) {
     `
 } else {
   document.getElementById('myNavbar').innerHTML = `
-      <div class="container d-flex justify-content-between">
-        <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"> <span
-            class="navbar-toggler-icon"></span> </button>
-      </div>
-
-      <div class="collapse bg-light text-right" id="navbarHeader">
+      <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"> <span
+            class="navbar-toggler-icon"></span> </button>    
+      <div class="collapse bg-light navbar-collapse" id="navbarHeader">
         <ul class="navbar-nav ml-3 pt-3">
           <li class="nav-item">
             <form class="form-inline my-1 my-lg-0">
