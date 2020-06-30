@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   API.get(`/videos/${localStorage.getItem("videoId")}`)
+  API.get(`/videos/${localStorage.getItem("videoId")}`)
        .then(response => {
          console.log(response.data.url)         
             document.getElementById('selected-video').innerHTML = 
@@ -25,5 +25,30 @@ $(document).ready(function () {
             
             `
        })
-        .catch(error => console.error(error))    
+        .catch(error => console.error(error))   
+  
+  $('#load-comments').on('click', function(event) {
+    API.get(`/videos/${localStorage.getItem("videoId")}/comments`)
+        .then(response => {
+          let code = ''          
+          response.data.forEach(element => {
+            code += `
+            <div class="card box-shadow d-flex flex-row ">
+              <div class="col-12 py-2">
+                <div class="card-header col-12">
+                  <img class="col-2 card-img rounded-circle small" src="https://picsum.photos/50">
+                  <span class="col-10 card-text">${element.userId}</span>
+                </div>
+                <div class="card-body col-12">
+                  <p class="card-text">${element.text}</p>
+                </div>
+              </div>
+            </div>
+           `                  
+          });
+          document.getElementById('user-comment').innerHTML = code
+        })
+        .catch(error => console.error(error))   
+  })
+  
 })
