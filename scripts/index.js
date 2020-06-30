@@ -58,4 +58,9 @@ $(document).ready(function () {
         alert('Account already registered!')
       })
   })
+
+  $('#searchBtn').on('click', function (event) {
+    localStorage.setItem('search', $('#searchInput').val())
+    window.location.href = 'results.html'
+  })
 })

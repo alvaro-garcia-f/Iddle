@@ -13,9 +13,9 @@ if (!localStorage.getItem('token')) {
           <form class="form-inline my-1 my-lg-0">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-                aria-describedby="basic-addon2">
+                aria-describedby="basic-addon2" id="searchInput">
               <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button"><i class="fa fa-search"
+                <button class="btn btn-outline-primary" type="button" id="searchBtn"><i class="fa fa-search"
                     aria-hidden="true"></i></button>
               </div>
             </div>
@@ -49,9 +49,9 @@ if (!localStorage.getItem('token')) {
             <form class="form-inline my-1 my-lg-0">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-                  aria-describedby="basic-addon2">
+                  aria-describedby="basic-addon2" id="searchInput">
                 <div class="input-group-append">
-                  <button class="btn btn-outline-primary" type="button"><i class="fa fa-search"
+                  <button class="btn btn-outline-primary" type="button" id="searchBtn"><i class="fa fa-search"
                       aria-hidden="true"></i></button>
                 </div>
               </div>
