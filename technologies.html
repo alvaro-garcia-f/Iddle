@@ -18,42 +18,9 @@
 
 <body class="bg-white">
   <!-- LOGIN FORM START -->
-  <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <div class="modal-header border-primary">
-          <h5 class="modal-title">Welcome back!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span class="text-primary" aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="loginEmail">Email</label>
-              <input type="email" class="form-control" id="loginEmail" placeholder="example@example.com"
-                aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-              <label for="loginPassword">Password</label>
-              <input type="password" class="form-control" id="loginPassword">
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </form>
-        </div>
-
-        <div class="modal-footer justify-content-center">
-          <span>You don't have an account? <a href="#" class="text-primary" data-dismiss="modal" data-toggle="modal"
-              data-target="#signUpModal">Register here</a></span>
-        </div>
-
-      </div>
-    </div>
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="login-modal-label"
+    aria-hidden="true" id="login-modal">
+    <!-- Loaded from checkauth.js -->
   </div>
   <!-- LOGIN FORM END -->
 

@@ -29,12 +29,51 @@ if (!localStorage.getItem('token')) {
         </div>
 
         <div class="modal-footer justify-content-center">
-          <span>You don't have an account? <a href="#" class="text-primary" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">Register here</a></span>
+          <span>You don't have an account? <a href="#" class="text-primary" data-dismiss="modal" data-toggle="modal" data-target="#signup-modal">Register here</a></span>
         </div>
 
       </div>
     </div>
   `
+
+  document.getElementById('signup-modal').innerHTML = `
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header border-primary">
+          <h5 class="modal-title">Join our Techies</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="text-primary" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="signupEmail">Email</label>
+              <input type="email" class="form-control" id="signupEmail" placeholder="example@example.com" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <input type="password" class="form-control" id="signupPassword" autocomplete="true">
+            </div>
+            <div class="form-group">
+              <label for="signupPassword2">Repeat Password</label>
+              <input type="password" class="form-control" id="signupPassword2" autocomplete="true">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary" id="signUpBtn">Submit</button>
+            </div>
+          </form>
+        </div>
+
+         <div class="modal-footer justify-content-center">
+          <span>Already have an account? <a href="#" class="text-primary" data-dismiss="modal" data-toggle="modal" data-target="#login-modal">Log in here</a></span>
+        </div>
+      </div>
+    </div>
+  `
+
   document.getElementById('myNavbar').innerHTML = `    
     <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">
