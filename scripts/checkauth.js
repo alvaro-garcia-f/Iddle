@@ -94,7 +94,7 @@ if (!localStorage.getItem('token')) {
         </li>
         <div class="dropdown-divider border-primary"></div>
         <li class="navbar-item">
-          <a class="nav-link" href="#">Technologies</a>
+          <a class="nav-link" href="techs.html">Technologies</a>
         </li>
         <li class="navbar-item">
           <a class="nav-link" href="level.html">Skill Level</a>
@@ -183,7 +183,7 @@ if (!localStorage.getItem('token')) {
           </li>
           <div class="dropdown-divider border-primary"></div>
           <li class="navbar-item">
-            <a class="nav-link" href="#">Technologies</a>
+            <a class="nav-link" href="techs.html">Technologies</a>
           </li>
           <li class="navbar-item">
             <a class="nav-link" href="level.html">Skill Level</a>

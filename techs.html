@@ -39,57 +39,35 @@
   <!-- UPLOAD VIDEO FORM END -->
 
   <!-- NAV MENU START -->
-  <div class="navbar navbar-expand-lg navbar-light bg-light" id="myNavbar">
+  <div class="navbar navbar-expand-lg navbar-light bg-light" id="myNavbar"> 
   </div>
   <!-- NAV MENU END -->
-
-  <div class="row px-3 pt-3">
-    <div class="col-6">
-      <h5 class="text-primary">User Profile</h5>
-    </div>
-    <div class="col-2">
-      <h6 class="text-primary">Reputation</h6>
-    </div>
-    <div class="col-12 pt-0">
-      <hr class="border-primary">
-    </div>
+  
+  <div class="row px-3 pt-3" id="techs-container">
+    
   </div>
-
   <div class="py-2">
     <div class="container">
-      <div class="row">
-        <div class="card border-white d-flex flex-row">
-          <div class="col-4">
-            <img class="card-img rounded-circle" src="https://picsum.photos/200">
+      <div class="row">       
+  
+        <div id="carousel-level-beginner" class="carousel slide">
+          <div class="carousel-inner" id="carousel-beginner">
+            <!-- Loaded from main.js -->
           </div>
-          <div class="card-body col-8">
-            <p class="card-text">About the user.</p>
-          </div>
+          <a class="carousel-control-prev pb-5 mb-3" href="#carousel-level-beginner" role="button" data-slide="prev">
+            <span class="text-light"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next pb-5 mb-3" href="#carousel-level-beginner" role="button" data-slide="next">
+            <span class="text-light" aria-hidden="true"><i class="fa fa-angle-right fa-4x"
+                aria-hidden="true"></i></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+          
+        
       </div>
     </div>
-  </div>
-
-  <div class="row px-3 pt-3">
-    <div class="col">
-      <h5 class="text-primary">Uploaded Videos</h5>
-      <hr class="border-primary">
-    </div>
-  </div>
-
-  <div id="carouselUploaded" class="carousel slide">
-    <div class="carousel-inner" id="user-uploaded-videos">
-      <!-- Loaded from profile.js -->
-    </div>
-    <a class="carousel-control-prev" href="#carouselUploaded" role="button" data-slide="prev">
-      <span class="text-primary"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselUploaded" role="button" data-slide="next">
-      <span class="text-primary" aria-hidden="true"><i class="fa fa-angle-right fa-2x"
-          aria-hidden="true"></i></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 
   <footer class="text-muted text-md-small py-2 style-dark bg-dark">
@@ -114,7 +92,7 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script src="scripts/index.js"></script>
-  <script src="scripts/profile.js"></script>
+  <script src="scripts/techs.js"></script>
 </body>
 
 </html>

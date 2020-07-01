@@ -2,6 +2,7 @@ function viewVideo (id) {
     localStorage.setItem('videoId', id)
     window.location.href = 'video.html' 
   }
+  
   $(document).ready(function () {
   
     API.get('/videos/level/beginner')

@@ -42,7 +42,7 @@ $(document).ready(function () {
               <div class="col-12 py-2">
                 <div class="card-header col-12">
                   <img class="col-2 card-img rounded-circle small" src="https://picsum.photos/50">
-                  <span class="col-10 card-text">${element.userId}</span>
+                  <span class="col-10 card-text">${element.userId.name}</span>
                 </div>
                 <div class="card-body col-12">
                   <p class="card-text">${element.text}</p>
