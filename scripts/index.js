@@ -17,7 +17,6 @@ $(document).ready(function () {
         if (response.data.error) {
           alert('Wrong Email/Password!')
         } else {
-          console.log('Your in motherfaka')
           localStorage.setItem('token', response.data.token)
           localStorage.setItem('email', response.data.email)
           localStorage.setItem('id', response.data.id)
@@ -48,7 +47,6 @@ $(document).ready(function () {
         if (response.data.error) {
           alert(response.data.error)
         } else {
-          console.log('Your in motherfaka')
           localStorage.setItem('token', response.data.token)
           localStorage.setItem('email', response.data.email)
           localStorage.setItem('id', response.data.id)
