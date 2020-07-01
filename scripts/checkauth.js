@@ -107,6 +107,62 @@ if (!localStorage.getItem('token')) {
     </div>
     `
 } else {
+
+  document.getElementById('upload-modal').innerHTML = `
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header border-primary">
+        <h5 class="modal-title">Upload Video</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="text-primary" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" aria-describedby="titleHelp">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="url">Url</label>
+            <input type="text" class="form-control" id="url">
+          </div>
+          <div class="form-group">
+            <label for="techs">Techs</label>
+            <input type="text" class="form-control" id="techs" name="techs">
+          </div>
+          <div class="form-group">
+            <label for="level">Skill level</label>
+            <div class="text-center">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons" id="levels">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="beginner" checked> Beginner
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="intermediate"> Intermediate
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="advanced"> Advanced
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer justify-content-center">
+        <button type="submit" class="btn btn-primary"><i class="fa fa-upload"></i>Upload</button>
+      </div>
+    </div>
+  </div>
+  `
+
   document.getElementById('myNavbar').innerHTML = `
       <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"> <span
@@ -137,7 +193,7 @@ if (!localStorage.getItem('token')) {
             <a class="nav-link" href="my-profile.html"><i class="fa fa-user-circle"></i> Profile</a>
           </li>
           <li class="navbar-item">
-            <a class="nav-link" href="#" type="button" data-toggle="modal" data-target="#uploadModal"><i
+            <a class="nav-link" href="#" type="button" data-toggle="modal" data-target="#upload-modal"><i
                 class="fa fa-upload"></i> Upload video</a>
           </li>
           <div class="dropdown-divider border-primary"></div>
