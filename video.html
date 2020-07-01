@@ -44,32 +44,50 @@
   <!-- NAV MENU END -->
 
   <div class="py-2">
-    <div class="container" id ="selected-video">
-      <!-- Loaded from video.js -->
-    </div>  
-    <div class="row text-center">
-      <div class="col-md-4 p-3">
-        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse" data-target="#comments" id="load-comments">Load Comments</button>
+    <div class="container">
+      <div class="card box-shadow">
+        <div class="embed-responsive embed-responsive-16by9" id='video-card-iframe'>
+          
+        </div>
+        <!-- BOTTOM CARD BODY START -->
+        <div class="card-body pt-0 pb-2">
+          <div class="d-flex justify-content-between flex-row align-items-center py-0">
+            <a href="#" style="font-size: 10px" id='video-card-level'> <!-- Loaded from video.js --> </a>
+            <div>
+              <span href="#" class="bg-white border-muted pr-1" style="font-size: 12px"><i
+                  class="fa fa-thumbs-o-up text-primary" aria-hidden="true"></i><small> 71</small></span>
+              <a class="bg-white border-muted" style="font-size: 12px" id="video-card-views"><!-- Loaded from video.js --></a>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col-12 card-text font-weight-bold" id="video-card-title"><!-- Loaded from video.js --></p>
+          </div>
+          <div class="d-flex flex-row justify-content-between" style="font-size: 12px">
+             <div id="video-card-author">
+               <!-- Loaded from video.js -->
+             </div> 
+            <div id="video-card-duration">
+              <!-- Loaded from video.js -->
+            </div>
+          </div>
+          <div class="pt-1" style="font-size: 12px" id="video-card-techs">
+            <!-- Loaded from video.js -->
+          </div>
+        </div>
+        <!-- BOTTOM CARD BODY END -->
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-4 p-3">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse"
+            data-target="#comments" id="load-comments">Load Comments</button>
+        </div>
       </div>
     </div>
 
     <div class="collapse row" id="comments" aria-labelledby="comments" aria-hidden="true">        
       <div class="container" id="user-comment">
-          <!--<div class="card box-shadow d-flex flex-row ">
-            <div class="col-12 py-2">
-              <div class="card-header col-12">
-                <img class="col-2 card-img rounded-circle small" src="https://picsum.photos/50">
-                <span class="col-10 card-text">User name</span>
-              </div>
-              <div class="card-body col-12">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eligendi.
-                  Laudantium
-                  laboriosam soluta alias omnis maiores tenetur nostrum. Fugit aliquid, itaque sint vitae corporis
-                  eveniet? Rerum minus quia ratione quod..</p>
-              </div>
-            </div>
-          </div>
-        </div>-->
+        <!-- Loaded from video.js -->
       </div>
     </div>
   </div>
