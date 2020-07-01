@@ -1,6 +1,13 @@
 function postComment() {
   API
-    .post(`/videos/me/${localStorage.getItem('videoId')}/comments`, document.getElementById('comment-text').value,)
+    .post(`/videos/me/${localStorage.getItem('videoId')}/comments`, 
+          { text: document.getElementById('comment-text').value },
+          { headers: { token: localStorage.getItem('token') } })
+    .then(response => {
+      document.location.reload()
+      console.log(response.data)
+    })
+    .catch(error => console.error(error))
 }
 
 $(document).ready(function () {
@@ -34,7 +41,6 @@ $(document).ready(function () {
     .catch(error => console.error(error))   
   
   $('#load-comments').on('click', function(event) {
-    console.log('click')
     API
       .get(`/videos/${localStorage.getItem("videoId")}/comments`)
       .then(response => {
@@ -59,19 +65,6 @@ $(document).ready(function () {
                       </form>
                     </span>
                   </div>
-                </div>
-                <div class="card-body col-12">
-                  <p class="card-text">
-                  <form>
-                    <div class="form-group">
-                      <label for="addComment">Add comment</label>                    
-                      <textarea class="form-control" id="description" rows="3"></textarea>
-                    </div>
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                  </form>
-                  </p>
                 </div>
               </div>
             </div>
