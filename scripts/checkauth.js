@@ -134,7 +134,7 @@ if (!localStorage.getItem('token')) {
           </li>
           <div class="dropdown-divider border-primary"></div>
           <li class="navbar-item">
-            <a class="nav-link" href="#"><i class="fa fa-user-circle"></i> Profile</a>
+            <a class="nav-link" href="my-profile.html"><i class="fa fa-user-circle"></i> Profile</a>
           </li>
           <li class="navbar-item">
             <a class="nav-link" href="#" type="button" data-toggle="modal" data-target="#uploadModal"><i

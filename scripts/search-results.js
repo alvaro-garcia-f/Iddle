@@ -14,7 +14,7 @@ API
       code += ` 
             <div class="col-md-4 p-3">
               <div class="card box-shadow">
-                <img class="card-img-top" src="http://i3.ytimg.com/vi/${element.url.split('/')[3]}/maxresdefault.jpg">
+                <img class="card-img-top" src="http://i3.ytimg.com/vi/${element.url.split('/')[4]}/maxresdefault.jpg">
                 <div class="card-body">
                   <div class="row">
                     <p class="col-8 card-text">${element.title}</p>
