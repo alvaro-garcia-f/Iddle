@@ -38,7 +38,8 @@ $(document).ready(function () {
     }
     const data = {
       user_email: $('#signupEmail').val(),
-      user_password: $('#signupPassword').val()
+      user_password: $('#signupPassword').val(),
+      user_username: $('#signupUsername').val()
     }
 
     API
@@ -50,7 +51,7 @@ $(document).ready(function () {
           localStorage.setItem('token', response.data.token)
           localStorage.setItem('email', response.data.email)
           localStorage.setItem('id', response.data.id)
-          window.location.href = 'own-profile-logged.html'
+          window.location.href = 'my-profile.html'
         }
       })
       .catch(function (error) {

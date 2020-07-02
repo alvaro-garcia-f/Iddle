@@ -7,7 +7,7 @@ $(document).ready(function() {
     API
         .get(`/users/me`, { headers: { token: localStorage.getItem('token')}})
         .then(response => {
-          document.getElementById('user-name').innerHTML = response.data.name
+          document.getElementById('user-name').innerHTML = response.data.username
           document.getElementById('user-about').innerHTML = response.data.about
 
           let code = ''
@@ -24,7 +24,7 @@ $(document).ready(function() {
                      </div>
                      <div class="d-flex justify-content-between pt-1">
                         <div>
-                          <small>Author Name</small> <br>
+                          <small>${response.data.username}</small> <br>
                           <span class="bg-white border-muted small"><i class="fa fa-eye text-primary" aria-hidden="true"></i><small> ${element.views}</small></span>
                         </div>
                         <div>

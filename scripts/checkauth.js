@@ -54,6 +54,10 @@ if (!localStorage.getItem('token')) {
               <input type="email" class="form-control" id="signupEmail" placeholder="example@example.com" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
+              <label for="signupUsername">Username</label>
+              <input type="text" class="form-control" id="signupUsername" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
               <label for="signupPassword">Password</label>
               <input type="password" class="form-control" id="signupPassword" autocomplete="true">
             </div>
@@ -140,15 +144,15 @@ if (!localStorage.getItem('token')) {
           <div class="form-group">
             <label for="level">Skill level</label>
             <div class="text-center">
-              <div class="btn-group btn-group-toggle" data-toggle="buttons" id="levels">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary active">
-                  <input type="radio" name="options" id="beginner" checked> Beginner
+                  <input type="radio" name="levels" value="Beginner" checked> Beginner
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="intermediate"> Intermediate
+                  <input type="radio" name="levels" value="Intermediate"> Intermediate
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="advanced"> Advanced
+                  <input type="radio" name="levels" value="Advanced"> Advanced
                 </label>
               </div>
             </div>
@@ -157,7 +161,7 @@ if (!localStorage.getItem('token')) {
       </div>
 
       <div class="modal-footer justify-content-center">
-        <button type="submit" class="btn btn-primary"><i class="fa fa-upload"></i>Upload</button>
+        <button type="submit" class="btn btn-primary" id="btn-upload-video"><i class="fa fa-upload"></i> Upload</button>
       </div>
     </div>
   </div>
