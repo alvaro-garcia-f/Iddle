@@ -80,8 +80,8 @@ if (!localStorage.getItem('token')) {
 
   document.getElementById('myNavbar').innerHTML = `
     <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">
-      <span class="navbar-toggler-icon"></span> </button>
+    <button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarHeader"> <i
+      class="fa fa-bars fa-1x text-primary" style="font-size: 22px" aria-hidden="true"></i> </button>
     <div class="collapse bg-light navbar-collapse" id="navbarHeader">
       <ul class="navbar-nav ml-3 mt-3">
         <li class="nav-item">
@@ -184,8 +184,8 @@ if (!localStorage.getItem('token')) {
 
   document.getElementById('myNavbar').innerHTML = `
       <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"> <span
-            class="navbar-toggler-icon"></span> </button>
+      <button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarHeader"> <i
+        class="fa fa-bars fa-1x text-primary" style="font-size: 22px" aria-hidden="true"></i> </button>
       <div class="collapse bg-light navbar-collapse" id="navbarHeader">
         <ul class="navbar-nav ml-3 pt-3">
           <li class="nav-item">
