@@ -49,22 +49,20 @@ $(document).ready(function () {
         if(localStorage.getItem('token')) {
           code = `
           <div class="container">
-            <div class="card box-shadow d-flex flex-row ">
-              <div class="col-12 py-2">
-                <div class="card-header col-12">
-                  <div class="flex-row">
-                    <img class="col-3 pb-1 card-img rounded-circle small" src="https://picsum.photos/50">
-                    <span class="card-text">
-                      <form action="javascript:postComment()">
-                        <div class="form-group">
-                          <textarea class="form-control" placeholder="Add comment" rows="3" id="comment-text"></textarea>
-                        </div>
-                        <div class="text-center">
-                          <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                      </form>
-                    </span>
-                  </div>
+            <div class="card box-shadow">
+              <div class="card-header">
+                <div class="flex-row">
+                  <img class="col-3 pb-1 card-img rounded-circle small" src="https://picsum.photos/50">
+                  <span class="card-text">
+                    <form action="javascript:postComment()">
+                      <div class="form-group">
+                        <textarea class="form-control" placeholder="Add comment" rows="3" id="comment-text"></textarea>
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </form>
+                  </span>
                 </div>
               </div>
             </div>
