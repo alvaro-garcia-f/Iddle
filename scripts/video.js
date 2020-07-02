@@ -1,6 +1,6 @@
 function postComment() {
   API
-    .post(`/videos/me/${localStorage.getItem('videoId')}/comments`, 
+    .post(`/videos/me/${localStorage.getItem('videoId')}/comments`,
           { text: document.getElementById('comment-text').value },
           { headers: { token: localStorage.getItem('token') } })
     .then(response => {
@@ -15,8 +15,8 @@ $(document).ready(function () {
     .put(`/videos/${localStorage.getItem("videoId")}/views`)
     .then(response => console.log(response.data))
     .catch(error => console.error(error))
-     
-  
+
+
   API
     .get(`/videos/${localStorage.getItem("videoId")}`)
     .then(response => {
@@ -38,25 +38,25 @@ $(document).ready(function () {
       })
       document.getElementById('video-card-techs').innerHTML = code
     })
-    .catch(error => console.error(error))   
-  
+    .catch(error => console.error(error))
+
   $('#load-comments').on('click', function(event) {
     API
       .get(`/videos/${localStorage.getItem("videoId")}/comments`)
       .then(response => {
-        let code = '' 
-        
+        let code = ''
+
         if(localStorage.getItem('token')) {
           code = `
           <div class="container">
             <div class="card box-shadow d-flex flex-row ">
               <div class="col-12 py-2">
                 <div class="card-header col-12">
-                  <div class="d-flex flex-row">
-                    <img class="col-2 card-img rounded-circle small" src="https://picsum.photos/50">
+                  <div class="flex-row">
+                    <img class="col-3 pb-1 card-img rounded-circle small" src="https://picsum.photos/50">
                     <span class="card-text">
                       <form action="javascript:postComment()">
-                        <div class="form-group">                  
+                        <div class="form-group">
                           <textarea class="form-control" placeholder="Add comment" rows="3" id="comment-text"></textarea>
                         </div>
                         <div class="text-center">
@@ -69,7 +69,7 @@ $(document).ready(function () {
               </div>
             </div>
           </div>
-          ` 
+          `
         }
 
         response.data.forEach(element => {
@@ -85,10 +85,10 @@ $(document).ready(function () {
               </div>
             </div>
           </div>
-         `                  
+         `
         });
         document.getElementById('user-comment').innerHTML = code
       })
-      .catch(error => console.error(error))   
-  })  
+      .catch(error => console.error(error))
+  })
 })
