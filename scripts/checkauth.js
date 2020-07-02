@@ -111,7 +111,6 @@ $(document).ready(function () {
         </div>
       </div>
     `
-  
     document.getElementById('myNavbar').innerHTML = `
       <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">
