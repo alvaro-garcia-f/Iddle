@@ -1,5 +1,36 @@
+function handleTags() {
+  var data = [
+    { "value": 1, "text": "Task 1"}, 
+    { "value": 2, "text": "Task 2"}]
+  
+  //get data pass to json
+  var task = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace("text"),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    local: data
+  });
+  
+  task.initialize();
+  
+  var elt = $("#techs");
+  elt.tagsinput({
+    itemValue: "value",
+    itemText: "text",
+    typeaheadjs: {
+      name: "task",
+      displayKey: "text",
+      source: task.ttAdapter()
+    }
+  });
+  
+  //insert data to input in load page
+  elt.tagsinput("add", {
+    value: 1,
+    text: "task 1",
+    continent: "task"
+  });
+}
 
-// USER NOT LOGGED
 if (!localStorage.getItem('token')) {
   document.getElementById('login-modal').innerHTML = `
     <div class="modal-dialog" role="document">
@@ -227,4 +258,6 @@ if (!localStorage.getItem('token')) {
     localStorage.clear()
     window.location.href = 'index.html'
   })
+
+  handleTags()
 }
