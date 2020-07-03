@@ -11,7 +11,7 @@ $(document).ready(async function () {
       const videos = await API.get(`videos/techs/${tech._id}`)
       if (videos.length === 0) { return }
       const videoHeader = `
-        <div class="py-2">
+        <div class="">
           <div class="container">
             <div class="row">
               <div id="carousel-${tech.name}" class="carousel slide">
@@ -43,9 +43,8 @@ $(document).ready(async function () {
       })
 
       const techHeader = document.createElement('div')
-      techHeader.classList.add('container')
       techHeader.innerHTML = `
-        <h5 class="text-primary">${tech.name}</h5>
+        <h5 class="text-primary mt-2">${tech.name}</h5>
         <hr class="border-primary mt-0">`
       document.getElementById('techs-container').appendChild(techHeader)
 
