@@ -12,7 +12,7 @@ $(document).ready(function() {
 
           let code = ''
           let count = 0
-          console.log(response.data.videos)
+     
           response.data.videos.forEach(element => {
             code += `
             <div class="carousel-item ${count === 0 ? 'active' : ''}">

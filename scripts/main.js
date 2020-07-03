@@ -4,7 +4,21 @@ function viewVideo (id) {
 }
 $(document).ready(function () {
 
-  API.get('/videos/mostwatched')
+  API
+    .get('/techs')
+    .then(response => {
+      code = ''
+      response.data.forEach(element => {
+        code += `
+          <a href="#" class="btn btn-outline-secondary m-1">${element.name}</a>
+        `
+      })
+      document.getElementById('container-pills').innerHTML = code
+    })
+    .catch(error => console.error(error))
+  
+  API
+    .get('/videos/mostwatched')
     .then(response => {    
       let code = ''
       let count = 0
@@ -38,7 +52,8 @@ $(document).ready(function () {
     })
     .catch(error => console.error(error))
 
-  API.get('/videos/techs/5efbdccdf707ebff5f788e35')
+  API
+    .get('/videos/techs/5efbdccdf707ebff5f788e35')
     .then(response => {
       let code = ''
       let count = 0
