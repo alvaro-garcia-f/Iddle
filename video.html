@@ -37,6 +37,44 @@
   </div>
   <!-- UPLOAD VIDEO FORM END -->
 
+  <!-- Modal share social networks-->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="share-modal-label"
+    aria-hidden="true" id="share-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header border-primary">
+          <div><h5 class="modal-title">Share this video!</h5></div>
+          <div<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="text-primary" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">          
+            <div class="row text-center justify-content-between col-12 my-4">
+              <div class="col-2">
+                <a href="#"><i class="fa fa-linkedin fa-2x" style="color: #0e76a8" aria-hidden="true"></i></a>                
+              </div>              
+              <div class="col-2">
+                <a href="#"><i class="fa fa-reddit fa-2x" style="color: #ff4301" aria-hidden="true"></i></a>                
+              </div>
+              <div class="col-2">
+                <a href="#"><i class="fa fa-facebook-square fa-2x" style="color: #4267b2" aria-hidden="true"></i></a>                
+              </div>              
+              <div class="col-2">
+                <a href="#"><i class="fa fa-envelope fa-2x" style="color: #d44638" aria-hidden="true"></i></a>                
+              </div>              
+            </div>          
+        </div>
+
+        <div class="modal-footer justify-content-center">
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- NAV MENU START -->
   <div class="navbar navbar-expand-lg navbar-light bg-white border-bottom" id="myNavbar">
   </div>
@@ -55,7 +93,7 @@
               <!-- Loaded from video.js --> </a>
             <div>
               <span href="#" class="bg-white border-muted pr-1" style="font-size: 12px">
-                <i class="fa fa-share-alt text-primary" style="font-size: 10px" aria-hidden="true"></i><span class="pr-1" style="font-size: 10px"> Share</span>
+                <a href="#" data-toggle="modal" data-target="#share-modal"><i class="fa fa-share-alt text-primary" style="font-size: 10px" aria-hidden="true"></i><span class="pr-1" style="font-size: 10px"> Share</span></a>
                 <i class="fa fa-thumbs-o-up text-primary" aria-hidden="true"></i><small> 71</small></span>
               <a class="bg-white border-muted" style="font-size: 12px" id="video-card-views">
                 <!-- Loaded from video.js --></a>
@@ -82,7 +120,7 @@
       </div>
 
       <div class="row text-center">
-        <div class="col-md-4 p-3">
+        <div class="col-lg-12 p-3">
           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="collapse" data-target="#comments"
             id="load-comments">Load Comments</button>
         </div>
@@ -104,16 +142,16 @@
       </div> 
       <div class="row text-center mb-2">
         <div class="text-light col-lg-2 mb-2">
-          <a href="https://github.com/alvaro-garcia-f/Iddle"><i class="fa fa-github text-light" aria-hidden="true"></i></a>
+          <a href="https://github.com/alvaro-garcia-f/Iddle" target="_blank"><i class="fa fa-github text-light" aria-hidden="true"></i></a>
           Iddle
-          <a href="https://github.com/alvaro-garcia-f/iddle-backend"><i class="fa fa-github-square text-light" aria-hidden="true"></i></a> -  2020       
+          <a href="https://github.com/alvaro-garcia-f/iddle-backend" target="_blank"><i class="fa fa-github-square text-light" aria-hidden="true"></i></a> -  2020       
         </div>        
         <div class="text-light col-lg-8 text-center">
-          <a href="https://github.com/albmg"><i class="fa fa-github text-light" aria-hidden="true"> Alberto Merino </i></a>
+          <a href="https://github.com/albmg" target="_blank"><i class="fa fa-github text-light" aria-hidden="true"> Alberto Merino </i></a>
           <i class="fa fa-code" aria-hidden="true"></i>
-          <a href="https://github.com/alvaro-garcia-f"><i class="fa fa-github text-light" aria-hidden="true"> Álvaro García </i></a>
+          <a href="https://github.com/alvaro-garcia-f" target="_blank"><i class="fa fa-github text-light" aria-hidden="true"> Álvaro García </i></a>
           <i class="fa fa-code" aria-hidden="true"></i>
-          <a href="https://github.com/cartiles0"><i class="fa fa-github text-light" aria-hidden="true"> Carlos Artiles</i></a>
+          <a href="https://github.com/cartiles0" target="_blank"><i class="fa fa-github text-light" aria-hidden="true"> Carlos Artiles</i></a>
         </div>
       </div>    
     </div>

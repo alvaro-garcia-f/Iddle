@@ -14,7 +14,7 @@ $(document).ready(function () {
   if(!localStorage.getItem('token')) {
     document.getElementById('body-btn-signup').innerHTML = `
         <div class="pb-4">
-          <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#login-modal">Get
+          <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#login-modal"><i class="fa fa-flag text-light" aria-hidden="true"></i> Get
             Started</a>
         </div>
       `
