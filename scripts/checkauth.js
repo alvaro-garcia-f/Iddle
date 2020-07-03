@@ -105,7 +105,7 @@ if (!localStorage.getItem('token')) {
         </li>
         <div class="dropdown-divider border-primary"></div>
         <li class="navbar-item">
-          <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#login-modal">Get Started</button>
+          <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#login-modal"><i class="fa fa-flag tex-light" aria-hidden="true"></i> Get Started</button>
         </li>
       </ul>
     </div>
@@ -113,7 +113,7 @@ if (!localStorage.getItem('token')) {
 
     document.getElementById('body-btn-signup').innerHTML = `
       <div class="pb-4">
-        <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#login-modal">Get
+        <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#login-modal"><i class="fa fa-flag" aria-hidden="true"></i> Get
           Started</a>
       </div>
     `

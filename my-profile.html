@@ -22,16 +22,20 @@
   <!-- UPLOAD VIDEO FORM END -->
 
   <!-- NAV MENU START -->
-  <div class="navbar navbar-expand-lg navbar-light bg-light" id="myNavbar">
+  <div class="navbar navbar-expand-lg navbar-light bg-white border-bottom" id="myNavbar">
   </div>
   <!-- NAV MENU END -->
   <div class="container">
     <div class="row px-3 pt-3">
-      <div class="col-6 col-lg-6">
+      <div class="col-7 col-lg-8">
         <h5 class="text-primary" id="user-name">User Profile</h5>
       </div>
-      <div class="col-2 col-lg-6">
-        <h6 class="text-primary">Reputation</h6>
+      <div class="col-5 col-lg-4">
+        <h6 class="text-primary">Reputation
+          <i class="fa fa-star text-success"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-danger"></i>
+      </h6>
       </div>
       <div class="col-12 pt-0">
         <hr class="border-primary">
@@ -42,19 +46,18 @@
       <div class="container">
         <div class="row">
           <div class="card border-white d-flex flex-row">
-            <div class="col-4">
-              <img class="card-img rounded-circle" src="https://picsum.photos/200">
-            </div>
-            <div class="card-body col-8">
-              <p class="card-text" id="user-about">About the user.</p>
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+              <div class="col-4">
+                <img class="card-img rounded-circle" src="https://picsum.photos/200">
+              </div>
+              <div class="card-body col-8">
+                <p class="card-text" id="user-about">About the user.</p>
               </div>
             </div>
-            </div>
+          </div>      
+          <div class="btn-group col-12 justify-content-center">
+            <button type="button" class="btn btn-sm btn-outline-secondary mr-2"><i class="fa fa-user-plus"></i> Edit</button>
+            <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-user-times"></i> Delete</button>
           </div>
-        </div>
       </div>
     </div>
 
@@ -82,14 +85,26 @@
       </div>
     </div>
 
+  <!-- FOOTER START -->
   <footer class="text-muted text-md-small py-2 style-dark bg-dark">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p><span class="text-primary">Iddle</span> 2020 - Made by <a class="text-primary" href="#">Alberto Merino</a> - <a
-          class="text-primary" href="#">Carlos Artiles</a> - <a class="text-primary" href="#">Álvaro
-          García</a></p>
+    <div class="container">  
+      <div class="float-right">
+        <a href="#" class="text-light"><i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i><!--Back to top--></a>
+      </div> 
+      <div class="row text-center mb-2">
+        <div class="text-light col-lg-2 mb-2">
+          <a href="https://github.com/alvaro-garcia-f/Iddle"><i class="fa fa-github text-light" aria-hidden="true"></i></a>
+          Iddle
+          <a href="https://github.com/alvaro-garcia-f/iddle-backend"><i class="fa fa-github-square text-light" aria-hidden="true"></i></a> -  2020       
+        </div>        
+        <div class="text-light col-lg-8 text-center">
+          <a href="https://github.com/albmg"><i class="fa fa-github text-light" aria-hidden="true"> Alberto Merino </i></a>
+          <i class="fa fa-code" aria-hidden="true"></i>
+          <a href="https://github.com/alvaro-garcia-f"><i class="fa fa-github text-light" aria-hidden="true"> Álvaro García </i></a>
+          <i class="fa fa-code" aria-hidden="true"></i>
+          <a href="https://github.com/cartiles0"><i class="fa fa-github text-light" aria-hidden="true"> Carlos Artiles</i></a>
+        </div>
+      </div>    
     </div>
   </footer>
 
