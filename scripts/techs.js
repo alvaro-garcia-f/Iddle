@@ -1,6 +1,6 @@
-function viewVideo (id) {  
+function viewVideo (id) {
   localStorage.setItem('videoId', id)
-  window.location.href = 'video.html' 
+  window.location.href = 'video.html'
 }
 
 $(document).ready(async function () {
@@ -43,10 +43,10 @@ $(document).ready(async function () {
       })
 
       const techHeader = document.createElement('div')
-      techHeader.classList.add('col-12')
+      techHeader.classList.add('container')
       techHeader.innerHTML = `
         <h5 class="text-primary">${tech.name}</h5>
-        <hr class="border-primary">`
+        <hr class="border-primary mt-0">`
       document.getElementById('techs-container').appendChild(techHeader)
 
       const videoFooter = `
