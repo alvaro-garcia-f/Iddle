@@ -112,10 +112,10 @@ $(document).ready(function () {
       </div>
     `
     document.getElementById('myNavbar').innerHTML = `
-      <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
+      <a href="index.html" class="navbar-brand d-flex align-items-center col-8 col-lg-2 tet-primary"><strong>Iddle</strong> </a>
       <button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarHeader"> <i
         class="fa fa-bars fa-1x text-primary" style="font-size: 22px" aria-hidden="true"></i> </button>
-      <div class="collapse bg-light navbar-collapse" id="navbarHeader">
+      <div class="collapse bg-white navbar-collapse col-lg-10 justify-content-end" id="navbarHeader">
         <ul class="navbar-nav ml-3 mt-3">
           <li class="nav-item">
             <form class="form-inline my-1 my-lg-0">
@@ -216,10 +216,10 @@ $(document).ready(function () {
     `
 
     document.getElementById('myNavbar').innerHTML = `
-        <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
+        <a href="index.html" class="navbar-brand d-flex align-items-center col-8 col-lg-2 tet-primary"><strong>Iddle</strong> </a>
         <button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarHeader"><i
         class="fa fa-bars fa-1x text-primary" style="font-size: 22px" aria-hidden="true"></i></button>
-        <div class="collapse bg-light navbar-collapse" id="navbarHeader">
+        <div class="collapse bg-white navbar-collapse col-lg-10 justify-content-end" id="navbarHeader">
           <ul class="navbar-nav ml-3 pt-3">
             <li class="nav-item">
               <form class="form-inline my-1 my-lg-0">
