@@ -216,7 +216,7 @@ $(document).ready(function () {
     `
 
     document.getElementById('myNavbar').innerHTML = `
-        <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
+        <a href="index.html" class="navbar-brand d-flex align-items-center"><span class="text-primary">&gt</span>Iddle</a>
         <button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarHeader"><i
         class="fa fa-bars fa-1x text-primary" style="font-size: 22px" aria-hidden="true"></i></button>
         <div class="collapse bg-light navbar-collapse" id="navbarHeader">

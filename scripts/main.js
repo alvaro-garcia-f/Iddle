@@ -17,7 +17,7 @@ $(document).ready(function () {
       code = ''
       response.data.forEach(tech => {
         code += `
-          <a href='javascript: getTech(${ JSON.stringify(tech._id) }, ${ JSON.stringify(tech.name)})' class="btn btn-outline-secondary m-1">${ tech.name }</a>
+          <a href='javascript: getTech(${ JSON.stringify(tech._id) }, ${ JSON.stringify(tech.name)})' class="btn btn-secondary text-white m-1"># ${ tech.name }</a>
         `
       })
       document.getElementById('container-pills').innerHTML = code
