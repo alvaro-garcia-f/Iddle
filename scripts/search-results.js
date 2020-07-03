@@ -6,6 +6,7 @@ function viewVideo (id) {
 let search = `/videos/mostwatched`
 
 if (localStorage.getItem('search') && localStorage.getItem('search') !== '') {
+  
   document.getElementById('header-search').innerText = `Videos for "${localStorage.getItem('search')}"`
   search = `/videos/search/${localStorage.getItem('search')}`
   localStorage.removeItem('search')

@@ -11,13 +11,22 @@ function getTech (id, name) {
 
 $(document).ready(function () {
 
+  if(!localStorage.getItem('token')) {
+    document.getElementById('body-btn-signup').innerHTML = `
+        <div class="pb-4">
+          <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#login-modal">Get
+            Started</a>
+        </div>
+      `
+  }
+
   API
     .get('/techs')
     .then(response => {
       code = ''
       response.data.forEach(tech => {
         code += `
-          <a href='javascript: getTech(${ JSON.stringify(tech._id) }, ${ JSON.stringify(tech.name)})' class="btn btn-outline-secondary m-1">${ tech.name }</a>
+          <a href='javascript: getTech(${ JSON.stringify(tech._id) }, ${ JSON.stringify(tech.name)})' class="btn btn-secondary text-white m-1"># ${ tech.name }</a>
         `
       })
       document.getElementById('container-pills').innerHTML = code

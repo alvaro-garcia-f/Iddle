@@ -4,6 +4,7 @@ const API = axios.create({
 })
 
 $(document).ready(function () {
+
   $('#loginBtn').on('click', function (event) {
     event.preventDefault()
     const data = {
