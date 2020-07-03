@@ -1,3 +1,7 @@
+function viewVideo (id) {  
+  localStorage.setItem('videoId', id)
+  window.location.href = 'video.html' 
+}
 
 let search = `/videos/mostwatched`
 
@@ -8,13 +12,12 @@ if (localStorage.getItem('search') && localStorage.getItem('search') !== '') {
 API
   .get(search)
   .then(response => {
-    console.log(response)
     let code = ''
     response.data.forEach(element => {
       code += `
         <div class="col-md-4 p-3">
           <div class="card box-shadow">
-            <img class="card-img-top" src="http://i3.ytimg.com/vi/${element.url.split('/')[4]}/maxresdefault.jpg">
+          <a href='javascript: viewVideo(${JSON.stringify(element._id)})' ><img class="card-img-top" src="http://i3.ytimg.com/vi/${element.url.split('/')[4]}/maxresdefault.jpg"></a>
             <div class="card-body">
               <div class="row">
                 <p class="col-8 card-text">${element.title}</p>
