@@ -144,13 +144,6 @@ $(document).ready(function () {
       </div>
       `
 
-      document.getElementById('body-btn-signup').innerHTML = `
-        <div class="pb-4">
-          <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#login-modal">Get
-            Started</a>
-        </div>
-      `
-
   } else {
 
     document.getElementById('upload-modal').innerHTML = `
