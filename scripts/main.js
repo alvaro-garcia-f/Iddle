@@ -2,7 +2,27 @@ function viewVideo (id) {
   localStorage.setItem('videoId', id)
   window.location.href = 'video.html'
 }
+
+function getTech (id, name) {
+  localStorage.setItem('tech', id)
+  localStorage.setItem('tech-name', name)
+  window.location.href = 'results.html'
+}
+
 $(document).ready(function () {
+
+  API
+    .get('/techs')
+    .then(response => {
+      code = ''
+      response.data.forEach(tech => {
+        code += `
+          <a href='javascript: getTech(${ JSON.stringify(tech._id) }, ${ JSON.stringify(tech.name)})' class="btn btn-outline-secondary m-1">${ tech.name }</a>
+        `
+      })
+      document.getElementById('container-pills').innerHTML = code
+    })
+    .catch(error => console.error(error))
 
   API.get('/videos/mostwatched')
     .then(response => {
@@ -16,7 +36,7 @@ $(document).ready(function () {
             <div class="card-body">
               <p class="card-text font-weight-bold">${element.title}</p>
               <div class="d-flex justify-content-between pt-1">
-                <small>Author Name</small>
+                <small>${element.author.username}</small>
                 <small class="card-text">${element.level}</small>
               </div>
               <div class="d-flex justify-content-between pt-1">
@@ -33,7 +53,8 @@ $(document).ready(function () {
     })
     .catch(error => console.error(error))
 
-  API.get('/videos/techs/5efbdccdf707ebff5f788e35')
+  API
+    .get('/videos/techs/5efbdccdf707ebff5f788e35')
     .then(response => {
       let code = ''
       let count = 0
@@ -41,11 +62,11 @@ $(document).ready(function () {
         code += `
           <div class="carousel-item ${count === 0 ? 'active' : ''}">
             <div class="card box-shadow">
-              <img class="card-img-top" src="http://i3.ytimg.com/vi/${element.url.split('/')[4]}/maxresdefault.jpg">
+            <a href='javascript: viewVideo(${JSON.stringify(element._id)})' ><img class="card-img-top" src="http://i3.ytimg.com/vi/${element.url.split('/')[4]}/maxresdefault.jpg"></a>
               <div class="card-body">
                 <p class="card-text font-weight-bold">${element.title}</p>
               <div class="d-flex justify-content-between pt-1">
-                <small>Author Name</small>
+                <small>${element.author.username}</small>
                 <small class="card-text">${element.level}</small>
               </div>
               <div class="d-flex justify-content-between pt-1">

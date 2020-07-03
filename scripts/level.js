@@ -5,7 +5,7 @@ function viewVideo (id) {
   
   $(document).ready(function () {
   
-    API.get('/videos/level/beginner')
+    API.get('/videos/level/Beginner')
       .then(response => {    
         let code = ''
         let count = 0
@@ -20,7 +20,7 @@ function viewVideo (id) {
                      </div>
                      <div class="d-flex justify-content-between pt-1">
                         <div>
-                          <small>Author Name</small> <br>
+                          <small>${element.author.username}</small> <br>
                           <span class="bg-white border-muted small"><i class="fa fa-eye text-primary" aria-hidden="true"></i><small> ${element.views}</small></span>
                         </div>
                         <div>
@@ -39,7 +39,7 @@ function viewVideo (id) {
       })
       .catch(error => console.error(error))
 
-      API.get('/videos/level/intermediate')
+      API.get('/videos/level/Intermediate')
       .then(response => {    
         let code = ''
         let count = 0
@@ -54,7 +54,7 @@ function viewVideo (id) {
                      </div>
                      <div class="d-flex justify-content-between pt-1">
                         <div>
-                          <small>Author Name</small> <br>
+                          <small>${element.author.username}</small> <br>
                           <span class="bg-white border-muted small"><i class="fa fa-eye text-primary" aria-hidden="true"></i><small> ${element.views}</small></span>
                         </div>
                         <div>
@@ -73,7 +73,7 @@ function viewVideo (id) {
       })
       .catch(error => console.error(error))
 
-      API.get('/videos/level/advanced')
+      API.get('/videos/level/Advanced')
       .then(response => {    
         let code = ''
         let count = 0
@@ -88,7 +88,7 @@ function viewVideo (id) {
                      </div>
                      <div class="d-flex justify-content-between pt-1">
                         <div>
-                          <small>Author Name</small> <br>
+                          <small>${element.author.username}</small> <br>
                           <span class="bg-white border-muted small"><i class="fa fa-eye text-primary" aria-hidden="true"></i><small> ${element.views}</small></span>
                         </div>
                         <div>

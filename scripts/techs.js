@@ -1,3 +1,8 @@
+function viewVideo (id) {  
+  localStorage.setItem('videoId', id)
+  window.location.href = 'video.html' 
+}
+
 $(document).ready(async function () {
   API
   .get('/techs/')
@@ -23,7 +28,7 @@ $(document).ready(async function () {
                 </div>
                 <div class="d-flex justify-content-between pt-1">
                   <div>
-                    <small>Author Name</small> <br>
+                    <small>${video.author.username}</small> <br>
                     <span class="bg-white border-muted small"><i class="fa fa-eye text-primary" aria-hidden="true"></i><small> ${video.views}</small></span>
                   </div>
                   <div>

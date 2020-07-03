@@ -4,8 +4,27 @@ function postComment() {
           { text: document.getElementById('comment-text').value },
           { headers: { token: localStorage.getItem('token') } })
     .then(response => {
-      document.location.reload()
-      console.log(response.data)
+      API
+        .get(`/users/${response.data.comments[response.data.comments.length-1].userId}`)
+        .then(user => {
+          const commentHeader = document.createElement('div')
+          commentHeader.classList.add('container')
+          commentHeader.classList.add('mt-1')
+          commentHeader.innerHTML = `
+            <div class="card box-shadow">
+              <div class="card-header">
+                <img class="col-2 card-img rounded-circle small" src="https://picsum.photos/50">
+                <span class="col-10 card-text">${user.data.username}</span>
+              </div>
+              <div class="card-body">
+                <p class="card-text">${response.data.comments[response.data.comments.length-1].text}</p>
+              </div>
+            </div>
+          `
+          document.getElementById('user-comment').appendChild(commentHeader)
+          window.scrollTo(0,document.body.scrollHeight);
+        })
+        .catch(error => console.error(error))
     })
     .catch(error => console.error(error))
 }

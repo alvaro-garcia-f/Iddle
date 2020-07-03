@@ -3,16 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- PAGE settings -->
-  <!--<link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">-->
-  <title>Iddle</title>
-  <meta name="description" content="Wireframe design of an album page by Pingendo">
-  <meta name="keywords" content="Pingendo bootstrap example template wireframe album ">
   <meta name="author" content="Alberto Merino, Álvaro García, Carlos Artiles">
-  <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     type="text/css">
+  <link rel="stylesheet" href="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+  <link rel="stylesheet" href="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/assets/app.css">
   <link rel="stylesheet" href="wireframe.css">
+  <link rel="stylesheet" href="utils/tagstyle.css">
 </head>
 
 <body class="bg-white">
@@ -50,10 +47,11 @@
       <div class="row my-5 justify-content-center">
         <div class="col-md-9">
           <h1>Welcome to Iddle</h1>
+          <h3>Find · Watch · Learn</h3>
           <p class="lead text-muted">Here you have a few technologies to pick to get you started.</p>
-          <a href="#" class="btn btn-outline-secondary m-1">Javascript</a>
-          <a href="#" class="btn btn-outline-secondary m-1">CSS</a>
-          <a href="#" class="btn btn-outline-secondary m-1">HTML</a>
+          <div id="container-pills">
+            <!-- Loaded from main.js-->
+          </div>
         </div>
       </div>
       <div class="row justify-content-center" id="body-btn-signup">
@@ -67,22 +65,11 @@
       <!-- CAROUSEL START-->
       <div class="row my-0 py-0">
         <div class="col">
-          <h5 class="text-primary my-0">Most watched</h5>
+          <h5 class="text-primary my-0">Most Watched Videos</h5>
           <hr class="border-primary mt-1">
         </div>
       </div>
-<!--
-      <div class="pb-1">
-      <a class="" href="#carouselMostWatched" role="button" data-slide="prev">
-        <span class="text-primary">< Previous</span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="float-right" href="#carouselMostWatched" role="button" data-slide="next">
-        <span class="text-primary" aria-hidden="true">Next ></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
--->
+      
       <div id="carouselMostWatched" class="carousel slide">
         <div class="carousel-inner" id="carousel-most-watched">
           <!-- Loaded from main.js -->
@@ -100,7 +87,7 @@
 
       <div class="row mt-4 py-0">
         <div class="col">
-          <h5 class="text-primary my-0">Tech Favourite Videos</h5>
+          <h5 class="text-primary my-0">Javascript Videos</h5>
           <hr class="border-primary mt-1">
         </div>
       </div>
@@ -134,14 +121,16 @@
     </div>
   </footer>
 
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/axios/dist/axios.min.js"></script>
-  <script src="scripts/checkauth.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+  <script src="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="scripts/checkauth.js"></script>
   <script src="scripts/index.js"></script>
   <script src="scripts/main.js"></script>
   <script src="scripts/upload.js"></script>
