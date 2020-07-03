@@ -19,7 +19,7 @@ $(document).ready(function () {
                    </div>
                    <div class="d-flex justify-content-between pt-1">
                       <div>
-                        <small>Author Name</small> <br>
+                        <small>${element.author.username}</small> <br>
                         <span class="bg-white border-muted small"><i class="fa fa-eye text-primary" aria-hidden="true"></i><small> ${element.views}</small></span>
                       </div>
                       <div>
@@ -46,14 +46,14 @@ $(document).ready(function () {
         code += ` 
           <div class="carousel-item ${count === 0 ? 'active' : ''}">
             <div class="card box-shadow">
-              <img class="card-img-top" src="http://i3.ytimg.com/vi/${element.url.split('/')[4]}/maxresdefault.jpg">
+            <a href='javascript: viewVideo(${JSON.stringify(element._id)})' ><img class="card-img-top" src="http://i3.ytimg.com/vi/${element.url.split('/')[4]}/maxresdefault.jpg"></a>
               <div class="card-body">
                 <div class="row">
                   <p class="col-12 card-text font-weight-bold">${element.title}</p>                     
                 </div>
                 <div class="d-flex justify-content-between pt-1">
                   <div>
-                    <small>Author Name</small> <br>
+                    <small>${element.author.username}</small> <br>
                     <span class="bg-white border-muted small"><i class="fa fa-eye text-primary" aria-hidden="true"></i><small> ${element.views}</small></span>
                   </div>
                   <div>

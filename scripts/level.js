@@ -5,7 +5,7 @@ function viewVideo (id) {
   
   $(document).ready(function () {
   
-    API.get('/videos/level/beginner')
+    API.get('/videos/level/Beginner')
       .then(response => {    
         let code = ''
         let count = 0
@@ -39,7 +39,7 @@ function viewVideo (id) {
       })
       .catch(error => console.error(error))
 
-      API.get('/videos/level/intermediate')
+      API.get('/videos/level/Intermediate')
       .then(response => {    
         let code = ''
         let count = 0
@@ -73,7 +73,7 @@ function viewVideo (id) {
       })
       .catch(error => console.error(error))
 
-      API.get('/videos/level/advanced')
+      API.get('/videos/level/Advanced')
       .then(response => {    
         let code = ''
         let count = 0
