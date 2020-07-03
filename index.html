@@ -3,11 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- PAGE settings -->
-  <!--<link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">-->
-  <title>Iddle</title>
-  <meta name="description" content="Wireframe design of an album page by Pingendo">
-  <meta name="keywords" content="Pingendo bootstrap example template wireframe album ">
+  <!-- PAGE settings -->  
+  <title>Iddle</title>  
   <meta name="author" content="Alberto Merino, Álvaro García, Carlos Artiles">
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -39,7 +36,7 @@
   <!-- UPLOAD VIDEO FORM END -->
 
   <!-- NAV MENU START -->
-  <div class="navbar navbar-expand-lg navbar-light bg-light" id="myNavbar">
+  <div class="navbar navbar-expand-lg navbar-light bg-white border-bottom" id="myNavbar">
           <!-- Loaded from checkauth.js -->
   </div>
   <!-- NAV MENU END -->
@@ -61,7 +58,7 @@
     </div>
   </div>
 
-  <div class="most-watched bg-white">
+  <div class="most-watched bg-white mb-4">
     <div class="container">
 
       <!-- CAROUSEL START-->
@@ -71,18 +68,7 @@
           <hr class="border-primary mt-1">
         </div>
       </div>
-<!--
-      <div class="pb-1">
-      <a class="" href="#carouselMostWatched" role="button" data-slide="prev">
-        <span class="text-primary">< Previous</span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="float-right" href="#carouselMostWatched" role="button" data-slide="next">
-        <span class="text-primary" aria-hidden="true">Next ></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
--->
+
       <div id="carouselMostWatched" class="carousel slide">
         <div class="carousel-inner" id="carousel-most-watched">
           <!-- Loaded from main.js -->
@@ -124,13 +110,24 @@
   </div>
 
   <footer class="text-muted text-md-small py-2 style-dark bg-dark">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p><span class="text-primary">Iddle</span> 2020 - Made by <a class="text-primary" href="#">Alberto Merino</a> - <a
-          class="text-primary" href="#">Carlos Artiles</a> - <a class="text-primary" href="#">Álvaro
-          García</a></p>
+    <div class="container">  
+      <div class="float-right">
+        <a href="#" class="text-light"><i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i><!--Back to top--></a>
+      </div> 
+      <div class="row text-center mb-2">
+        <div class="text-light col-lg-2 mb-2">
+          <a href="https://github.com/alvaro-garcia-f/Iddle"><i class="fa fa-github text-light" aria-hidden="true"></i></a>
+          Iddle
+          <a href="https://github.com/alvaro-garcia-f/iddle-backend"><i class="fa fa-github-square text-light" aria-hidden="true"></i></a> -  2020       
+        </div>        
+        <div class="text-light col-lg-8 text-center">
+          <a href="https://github.com/albmg"><i class="fa fa-github text-light" aria-hidden="true"> Alberto Merino </i></a>
+          <i class="fa fa-code" aria-hidden="true"></i>
+          <a href="https://github.com/alvaro-garcia-f"><i class="fa fa-github text-light" aria-hidden="true"> Álvaro García </i></a>
+          <i class="fa fa-code" aria-hidden="true"></i>
+          <a href="https://github.com/cartiles0"><i class="fa fa-github text-light" aria-hidden="true"> Carlos Artiles</i></a>
+        </div>
+      </div>    
     </div>
   </footer>
 
