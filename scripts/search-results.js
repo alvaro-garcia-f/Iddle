@@ -21,6 +21,7 @@ if (localStorage.getItem('tech') && localStorage.getItem('tech') !== '') {
 API
   .get(search)
   .then(response => {
+    console.log(response.data)
     let code = ''
     response.data.forEach(element => {
       code += `
@@ -30,7 +31,7 @@ API
             <div class="card-body">
                 <p class="card-text font-weight-bold">${element.title}</p>
               <div class="d-flex justify-content-between pt-1">
-                <small>Author Name</small>
+                <small>${element.author.username}</small>
                 <small class="card-text">${element.level}</small>
               </div>
               <div class="d-flex justify-content-between pt-1">
