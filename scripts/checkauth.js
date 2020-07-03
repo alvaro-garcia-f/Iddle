@@ -112,7 +112,7 @@ $(document).ready(function () {
       </div>
     `
     document.getElementById('myNavbar').innerHTML = `
-      <a href="index.html" class="navbar-brand d-flex align-items-center"><strong>Iddle</strong> </a>
+      <a href="index.html" class="navbar-brand d-flex align-items-center"><i class="fa fa-chevron-right" style="font-size: 12px; margin-top: 2px" aria-hidden="true"></i><i class="fa fa-minus-square text-primary fa-rotate-90" style="margin-right: 1.5px" aria-hidden="true"></i>ddle</a>
       <button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarHeader"> <i
         class="fa fa-bars fa-1x text-primary" style="font-size: 22px" aria-hidden="true"></i> </button>
       <div class="collapse bg-light navbar-collapse" id="navbarHeader">
@@ -209,7 +209,7 @@ $(document).ready(function () {
     `
 
     document.getElementById('myNavbar').innerHTML = `
-        <a href="index.html" class="navbar-brand d-flex align-items-center"><span class="text-primary">&gt</span>Iddle</a>
+        <a href="index.html" class="navbar-brand d-flex align-items-center font-weight-bold"><i class="fa fa-chevron-right" style="font-size: 12px; margin-top: 2px" aria-hidden="true"></i><i class="fa fa-minus-square text-primary fa-rotate-90" style="margin-right: 1.5px" aria-hidden="true"></i>ddle</a>
         <button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarHeader"><i
         class="fa fa-bars fa-1x text-primary" style="font-size: 22px" aria-hidden="true"></i></button>
         <div class="collapse bg-light navbar-collapse" id="navbarHeader">
