@@ -6,7 +6,16 @@ function viewVideo (id) {
 let search = `/videos/mostwatched`
 
 if (localStorage.getItem('search') && localStorage.getItem('search') !== '') {
+  document.getElementById('header-search').innerText = `Videos for "${localStorage.getItem('search')}"`
   search = `/videos/search/${localStorage.getItem('search')}`
+  localStorage.removeItem('search')
+}
+
+if (localStorage.getItem('tech') && localStorage.getItem('tech') !== '') {
+  document.getElementById('header-search').innerText = `Videos for "${localStorage.getItem('tech-name')}"`
+  search = `/videos/techs/${localStorage.getItem('tech')}`
+  localStorage.removeItem('tech')
+  localStorage.removeItem('tech-name')
 }
 
 API

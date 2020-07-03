@@ -16,11 +16,11 @@ $(document).ready(function() {
         API
          .post('/videos/me/', data, { headers: { token: localStorage.getItem('token') }})
          .then(response => {
-           console.log(response)
            alert('Video has been succesfully uploaded!')
            window.location.reload()
          })
          .catch(error => console.error(error))
       })
+      .catch(error => console.error(error))
   })
 })
