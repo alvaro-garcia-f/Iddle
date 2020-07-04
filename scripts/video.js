@@ -45,7 +45,7 @@ $(document).ready(function () {
       document.getElementById('video-card-views').innerHTML = `<i class="fa fa-eye text-primary"
       aria-hidden="true"></i><small> ${response.data.views}</small>`
       document.getElementById('video-card-title').innerHTML = response.data.title
-      document.getElementById('video-card-author').innerHTML = `<a href="#">${response.data.author.name}</a>`
+      document.getElementById('video-card-author').innerHTML = `<a href="#">${response.data.author.username}</a>`
       document.getElementById('video-card-duration').innerHTML = `<a class="text-muted">${response.data.duration} mins</a>`
       document.getElementById('video-card-level').innerHTML = response.data.level
 
