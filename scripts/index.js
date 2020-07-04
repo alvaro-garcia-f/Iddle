@@ -20,7 +20,7 @@ $(document).ready(function () {
         } else {
           localStorage.setItem('token', response.data.token)
           localStorage.setItem('email', response.data.email)
-          window.location.href = 'index.html'
+          window.location.reload()
         }
       })
       .catch(function (error) {
@@ -50,7 +50,7 @@ $(document).ready(function () {
         } else {
           localStorage.setItem('token', response.data.token)
           localStorage.setItem('email', response.data.email)
-          window.location.href = 'my-profile.html'
+          window.location.reload()
         }
       })
       .catch(function (error) {

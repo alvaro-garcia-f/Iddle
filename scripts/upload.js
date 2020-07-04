@@ -17,7 +17,8 @@ $(document).ready(function() {
          .post('/videos/me/', data, { headers: { token: localStorage.getItem('token') }})
          .then(response => {
            alert('Video has been succesfully uploaded!')
-           window.location.reload()
+           localStorage.setItem('videoId', response.data._id)
+           window.location.href = 'video.html'
          })
          .catch(error => console.error(error))
       })
