@@ -12,9 +12,9 @@ Demo: https://alvaro-garcia-f.github.io/Iddle/my-profile.html
 
 Iddle has been developed by:
 
-Alberto Merino: https://github.com/albmg
-Álvaro García: https://github.com/alvaro-garcia-f
-Carlos Artiles: https://github.com/cartiles0
+- Alberto Merino: https://github.com/albmg
+- Álvaro García: https://github.com/alvaro-garcia-f
+- Carlos Artiles: https://github.com/cartiles0
 
 ## FEATURES
 
